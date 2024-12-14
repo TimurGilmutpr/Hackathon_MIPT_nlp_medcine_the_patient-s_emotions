@@ -17,48 +17,44 @@
    - pip install --upgrade datasets
    - conda install -c conda-forge librosa
      
-2. Установка FFmpeg
+3. Установка FFmpeg
 Для работы с аудио необходимо установить FFmpeg. Вот как это сделать:
-2.1. Скачайте FFmpeg:
+3.1. Скачайте FFmpeg:
 Перейдите на официальный сайт [FFmpeg](https://ffmpeg.org/download.html).
 Выберите версию для вашей операционной системы.
 
-2.2. Установите FFmpeg:
-- Распакуйте скачанный архив в удобное место
-- Добавьте путь к папке `bin` в переменную окружения `PATH`:
-- Откройте "Параметры системы" → "Переменные среды".
-- Найдите переменную `PATH` и добавьте путь к папке `C:\ffmpeg\bin`.
-- Проверте установился ли ffmpeg: ffmpeg -version
+3.2. Установите FFmpeg:
+  - Распакуйте скачанный архив в удобное место
+  - Добавьте путь к папке `bin` в переменную окружения `PATH`:
+  - Откройте "Параметры системы" → "Переменные среды".
+  - Найдите переменную `PATH` и добавьте путь к папке `C:\ffmpeg\bin`.
+  - Проверте установился ли ffmpeg: ffmpeg -version
   
-3. Настройка Windows для работы с символическими ссылками
-- Откройте Параметры Windows.
-- Перейдите в раздел Система → Для разработчиков.
-- Включите Режим разработчика.
-- Перезапустите компьютер
+4. Настройка Windows для работы с символическими ссылками
+  - Откройте Параметры Windows.
+  - Перейдите в раздел Система → Для разработчиков.
+  - Включите Режим разработчика.
+  - Перезапустите компьютер
 
-4. Добавьте следующую настройку в ваш код, чтобы оптимизировать использование памяти CUDA:
-import os
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+5. Добавьте следующую настройку в ваш код, чтобы оптимизировать использование памяти CUDA:
+  import os
+  os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-5. Импорты для проекта
-
-5.1. Импорты для библиотеки aniemore:
-
-import torch
-from torch.amp import autocast
-from aniemore.recognizers.voice import VoiceRecognizer
-from aniemore.models import HuggingFaceModel
-
-5.2. Импорты для работы с аудио:
-from pyannote.audio import Pipeline
-from collections import defaultdict
-from pydub import AudioSegment
-import whisper
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
-
-5.3. Другие импорты:
-import pandas as pd
-import soundfile as sf
-import os
-import spacy
-import numpy as np
+6. Импорты для проекта
+  6.1. Импорты для библиотеки aniemore:
+    import torch
+    from torch.amp import autocast
+    from aniemore.recognizers.voice import VoiceRecognizer
+    from aniemore.models import HuggingFaceModel
+  6.2. Импорты для работы с аудио:
+    from pyannote.audio import Pipeline
+    from collections import defaultdict
+    from pydub import AudioSegment
+    import whisper
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
+  6.3. Другие импорты:
+    import pandas as pd
+    import soundfile as sf
+    import os
+    import spacy
+    import numpy as np
