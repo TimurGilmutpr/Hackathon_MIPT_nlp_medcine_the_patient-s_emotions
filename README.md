@@ -42,19 +42,19 @@
 
 6. Импорты для проекта
   6.1. Импорты для библиотеки aniemore:
-    import torch
-    from torch.amp import autocast
-    from aniemore.recognizers.voice import VoiceRecognizer
-    from aniemore.models import HuggingFaceModel
+    - import torch
+    - from torch.amp import autocast
+    - from aniemore.recognizers.voice import VoiceRecognizer
+    - from aniemore.models import HuggingFaceModel
   6.2. Импорты для работы с аудио:
-    from pyannote.audio import Pipeline
-    from collections import defaultdict
-    from pydub import AudioSegment
-    import whisper
-    from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
+    - from pyannote.audio import Pipeline
+    - from collections import defaultdict
+    - from pydub import AudioSegment
+    - import whisper
+    - from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
   6.3. Другие импорты:
-    import pandas as pd
-    import soundfile as sf
-    import os
-    import spacy
-    import numpy as np
+    - import pandas as pd
+    - import soundfile as sf
+    - import os
+    - import spacy
+    - import numpy as np
